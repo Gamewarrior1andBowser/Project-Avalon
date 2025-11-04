@@ -1,8 +1,33 @@
-.pause {
+.map {
+  display: flex;
+  align-self: center;
+  align-items: center;
+}
+
+.battle, .pause {
+  display: grid;
+  place-items: center;
+}
+
+img {
+  width: 300%;
+}
+
+div {
   display: flex;
 }
 
-.map, .battle {
-  display: grid;
+i {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  width: 96px;
+  height: 96px;
 }
 
+.leo_idle0 {
+  background-image: url(/assets/media/leo_idle0.png);
+}
+
+.leo_idle1 {
+  background-image: url(/assets/media/leo_idle1.png);
+}
