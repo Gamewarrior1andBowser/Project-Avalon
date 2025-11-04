@@ -1,7 +1,16 @@
+.pause {
+  background-color: #DDDDDD;
+  padding: 10px;
+}
+
 .map {
   display: flex;
   align-self: center;
   align-items: center;
+}
+
+.pause, .map {
+  border: 2px, solid #000000;
 }
 
 .battle, .pause {
@@ -17,17 +26,18 @@ div {
   display: flex;
 }
 
-i {
+.leo_idle0 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
   width: 96px;
   height: 96px;
-}
-
-.leo_idle0 {
   background-image: url(/assets/media/leo_idle0.png);
 }
 
 .leo_idle1 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  width: 96px;
+  height: 96px;
   background-image: url(/assets/media/leo_idle1.png);
 }

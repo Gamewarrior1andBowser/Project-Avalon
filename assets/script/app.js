@@ -18,25 +18,6 @@ class Hero {
   }
 
   //methods
-  animate() {
-    let target = null;
-    if (inBattle == true) {
-      target = document.querySelector(`.battle${this.name}`);
-    } else {
-      target = document.querySelector(`.map${this.name}`);
-    };
-    while (isPaused == false && timeout == false) {
-      if (animation == 'idle') {
-        target.classList.toggle(this.sprites[0]);
-        target.classList.toggle(this.sprites[1]);
-        timeout = true;
-        setTimeout(() => {
-        timeout = false;
-        }, 1000);
-      }
-      
-    }
-  }
   getBio() {
     return `${this.name} (Level: ${this.level} ${this.race} ${this.job})`;
   }
@@ -47,6 +28,4 @@ const Leo = new Hero(
 );
 
 console.log(Leo.getBio());
-
-Leo.animate();
 
