@@ -1,0 +1,8 @@
+.pause {
+  display: flex;
+}
+
+.map, .battle {
+  display: grid;
+}
+
