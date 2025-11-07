@@ -1,21 +1,60 @@
-.pause {
-  background-color: #DDDDDD;
+.container {
+  width: min(100% - 30px, 1080px);
   padding: 10px;
+  background-color: #EEEEEE;
 }
 
-.map {
+main {
+  width: 800px;
+  height: 800px;
+}
+
+.battle {
+  width: 750px;
+  height: 750px;
+}
+
+.pause {
+
+}
+
+.grid {
+  display: grid;
+  place-items: center;
+}
+
+.pause, .battle {
+  position: fixed;
+}
+
+.pause {
+  width: 50%;
+  left: 20%;
+  top: 35%;
+  background-color: #b9895b;
+  padding: 10px;
+  z-index: 3;
+  border: 3px, solid #423522;
+  border-radius: 20px;
+}
+
+.map, .container {
   display: flex;
   align-self: center;
   align-items: center;
+  align-content: center;
 }
 
-.pause, .map {
+.battle {
+   z-index: 2;
+   width: 800px;
+   left: 7%;
+   top: 10%;
+   width: 80%;
+}
+
+.map, .battle, .container {
   border: 2px, solid #000000;
-}
-
-.battle, .pause {
-  display: grid;
-  place-items: center;
 }
 
 img {
@@ -26,18 +65,31 @@ div {
   display: flex;
 }
 
+.sprite{
+  width: 96px;
+  height: 96px;
+}
+
 .leo_idle0 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
-  width: 96px;
-  height: 96px;
   background-image: url(/assets/media/leo_idle0.png);
 }
 
 .leo_idle1 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
-  width: 96px;
-  height: 96px;
   background-image: url(/assets/media/leo_idle1.png);
+}
+
+.goblin_idle0 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-image: url(/assets/media/goblin_idle0);
+}
+
+.goblin_idle1 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-image: url(/assets/media/goblin_idle1.png);
 }
