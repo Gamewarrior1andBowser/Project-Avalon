@@ -93,3 +93,27 @@ div {
   background-size: 96px 96px;
   background-image: url(/assets/media/goblin_idle1.png);
 }
+
+.blaster_idle0 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-image: url(/assets/media/goblin_idle0);
+}
+
+.blaster_idle1 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-image: url(/assets/media/goblin_idle1.png);
+}
+
+.skeleton_idle0 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-image: url(/assets/media/skeleton_idle0);
+}
+
+.skeleton_idle1 {
+  background-repeat: no-repeat;
+  background-size: 96px 96px;
+  background-image: url(/assets/media/skeleton_idle1.png);
+}

@@ -4,8 +4,12 @@ let timeout = false;
 let enemies = 0;
 const spritesLeo = ["leo_idle0", "leo_idle1"];
 const spritesGoblin = ["goblin_idle0", "goblin_idle1"];
+const spritesSkeleton = ["skeleton_idle0", "skeleton_idle1"];
+const spritesBlaster = ["blaster_idle0", "blaster_idle1"];
 const iconLeo = document.getElementById('Leo');
 const iconEnemy1 = document.getElementById('Enemy1');
+const iconEnemy2 = document.getElementById('Enemy2');
+const iconEnemy3 = document.getElementById('Enemy3');
 
 const characters = {Leo: iconLeo, Goblin: iconEnemy1};
 
@@ -39,7 +43,8 @@ class Hero {
   }
 }
 class Enemy {
-  constructor(name, spriteSheet) {
+  constructor(name, spriteSheet, icon) {
+    characters[this] = icon;
     enemies += 1;
     this.name = name;
     this.maxHealth = 10;
@@ -65,7 +70,13 @@ const Leo = new Hero(
   'Leo', 'Northstar', 'Eternian-Cat', 'Adventurer', spritesLeo
 );
 const Goblin = new Enemy(
-  'Goblin', spritesGoblin
+  'Goblin', spritesGoblin, iconEnemy1
+)
+const Skeleton = new Enemy(
+  'Skeleton', spritesSkeleton, iconEnemy3
+)
+const Blaster = new Enemy(
+  'Blaster', spritesBlaster, iconEnemy2
 )
 
 console.log(Leo.getBio());
