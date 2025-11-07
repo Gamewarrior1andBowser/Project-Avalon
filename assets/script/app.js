@@ -11,10 +11,12 @@ const iconEnemy1 = document.getElementById('Enemy1');
 const iconEnemy2 = document.getElementById('Enemy2');
 const iconEnemy3 = document.getElementById('Enemy3');
 
-const characters = {Leo: iconLeo, Goblin: iconEnemy1};
+const objects = [iconLeo, iconEnemy1];
+const characters = [];
 
 class Hero {
   constructor(firstName, lastName, race, job, spriteSheet) {
+    characters.push(this);
     this.lName = lastName;
     this.fName = firstName;
     this.race = race;
@@ -44,7 +46,7 @@ class Hero {
 }
 class Enemy {
   constructor(name, spriteSheet, icon) {
-    characters[this] = icon;
+    characters.push(this);
     enemies += 1;
     this.name = name;
     this.maxHealth = 10;
@@ -81,10 +83,12 @@ const Blaster = new Enemy(
 
 console.log(Leo.getBio());
 
-while (isPaused == false) {
+while (isPaused == false && timeout == false) {
+  timeout = true;
   setTimeout(() => {
-    for (let i in characters) {
-      i.animate(characters[i]);
+    for (let i = 0; i++; i < characters.length) {
+      characters[i].animate(objects[i]);
     }
+    timeout = false;
   }, 1000)
 }

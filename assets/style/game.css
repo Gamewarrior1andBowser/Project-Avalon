@@ -2,20 +2,42 @@
   width: min(100% - 30px, 1080px);
   padding: 10px;
   background-color: #EEEEEE;
+  display: flex;
+  position: absolute;
+  left: 6%;
+  top: 6%;
 }
 
-main {
-  width: 800px;
+main, .map {
+  width: 900px;
   height: 800px;
 }
 
+.map, .menu, .battle, .pause {
+  position: relative;
+}
+
+.map {
+  width: 120%;
+}
+
 .battle {
-  width: 750px;
+  width: 114%;
   height: 750px;
+  bottom: 98%;
+  left: 3%;
+  z-index: 2;
 }
 
 .pause {
-
+  background-color: #b9895b;
+  border-radius: 10px;
+  font-size: 26px;
+  font-weight: 800;
+  bottom: 223%;
+  right: 1.4%;
+  padding: 5px 15px;
+  z-index: 5;
 }
 
 .grid {
@@ -23,34 +45,35 @@ main {
   place-items: center;
 }
 
-.pause, .battle {
-  position: fixed;
-}
-
-.pause {
-  width: 50%;
-  left: 20%;
-  top: 35%;
+.menu {
+  width: 500px;
+  left: 33%;
+  bottom: 155%;
   background-color: #b9895b;
   padding: 10px;
   z-index: 3;
   border: 3px, solid #423522;
   border-radius: 20px;
+  place-content: center;
+  visibility: hidden;
+}
+
+.menu div button {
+  background: none;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+}
+
+.map, .container, .battle, .pause {
+  display: flex;
 }
 
 .map, .container {
-  display: flex;
   align-self: center;
   align-items: center;
   align-content: center;
-}
-
-.battle {
-   z-index: 2;
-   width: 800px;
-   left: 7%;
-   top: 10%;
-   width: 80%;
 }
 
 .map, .battle, .container {
@@ -65,7 +88,11 @@ div {
   display: flex;
 }
 
-.sprite{
+.visible {
+  visibility: visible;
+}
+
+.sprite {
   width: 96px;
   height: 96px;
 }
@@ -85,7 +112,7 @@ div {
 .goblin_idle0 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
-  background-image: url(/assets/media/goblin_idle0);
+  background-image: url(/assets/media/goblin_idle0.png);
 }
 
 .goblin_idle1 {
@@ -97,19 +124,19 @@ div {
 .blaster_idle0 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
-  background-image: url(/assets/media/goblin_idle0);
+  background-image: url(/assets/media/blaster_idle0.png);
 }
 
 .blaster_idle1 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
-  background-image: url(/assets/media/goblin_idle1.png);
+  background-image: url(/assets/media/blaster_idle1.png);
 }
 
 .skeleton_idle0 {
   background-repeat: no-repeat;
   background-size: 96px 96px;
-  background-image: url(/assets/media/skeleton_idle0);
+  background-image: url(/assets/media/skeleton_idle0.png);
 }
 
 .skeleton_idle1 {
